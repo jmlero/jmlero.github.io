@@ -1,0 +1,47 @@
+- title: Applied AI & GenAI in DevOps
+  icon: "//"
+  tag: Core Focus
+  description: >
+    How generative AI is changing the DevOps landscape. From AI-assisted
+    incident response to intelligent CI/CD pipelines, I explore what works
+    in practice — not just what looks good in demos.
+
+- title: Model Context Protocol (MCP)
+  icon: "<>"
+  tag: Deep Dive
+  description: >
+    MCP is becoming the standard for connecting AI models to tools and data
+    sources. I dig into how it works, why it matters for infrastructure, and
+    how platform teams can leverage it to build smarter tooling.
+
+- title: AI Agents for Infrastructure
+  icon: "[]"
+  tag: Emerging
+  description: >
+    Autonomous agents that can reason about infrastructure, execute runbooks,
+    and respond to production issues. I explore the architectures, safety
+    patterns, and real-world use cases that make AI agents useful in ops.
+
+- title: Cloud-Native Architecture
+  icon: "{}"
+  tag: Foundation
+  description: >
+    Designing systems that are resilient, scalable, and observable from the
+    start. Kubernetes, service meshes, serverless, and the patterns that
+    make cloud-native work at scale.
+
+- title: Platform Engineering & DX
+  icon: "#!"
+  tag: Core Focus
+  description: >
+    Building internal developer platforms that reduce cognitive load and
+    accelerate delivery. The tooling, abstractions, and golden paths that
+    let engineering teams focus on what matters.
+
+- title: Infrastructure as Code
+  icon: "$>"
+  tag: Foundation
+  description: >
+    Declarative, version-controlled, reproducible infrastructure. Terraform,
+    Pulumi, Crossplane — the tools and practices that make infrastructure
+    manageable and auditable.

@@ -1,104 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog — Jose Molero</title>
-    <meta name="description" content="Writing about applied AI in DevOps, MCP, AI Agents, platform engineering, and cloud infrastructure.">
+---
+layout: page
+title: Blog
+label: Blog
+heading: Thoughts on AI, infra, and everything in between
+subtitle: I write about what I'm learning at the intersection of AI and platform engineering.
+permalink: /blog/
+description: Writing about applied AI in DevOps, MCP, AI Agents, platform engineering, and cloud infrastructure.
+---
 
-    <meta property="og:title" content="Blog — Jose Molero">
-    <meta property="og:description" content="Writing about applied AI in DevOps, MCP, AI Agents, and platform engineering.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jmlero.github.io/blog/">
-
-    <link rel="canonical" href="https://jmlero.github.io/blog/">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-    <div class="bg-glow"></div>
-
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="/" class="nav-logo">jmlero<span>_</span></a>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/topics.html">Topics</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/connect.html">Connect</a></li>
-            </ul>
+<div class="blog-grid">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="card blog-card fade-in">
+        <div class="blog-meta">
+            <span class="blog-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            {% for tag in post.tags %}
+            <span class="blog-tag">{{ tag }}</span>
+            {% endfor %}
         </div>
-    </nav>
-
-    <main class="page">
-        <div class="container">
-            <section class="page-header">
-                <p class="section-label fade-in">Blog</p>
-                <h1 class="section-title fade-in">Thoughts on AI, infra, and everything in between</h1>
-                <p class="section-subtitle fade-in mt-2">I write about what I'm learning at the intersection of AI and platform engineering.</p>
-            </section>
-
-            <section class="section" style="padding-top: 2rem;">
-                <div class="blog-grid">
-                    <a href="/blog/mcp-usb-c-moment.html" class="card blog-card fade-in">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-02-10</span>
-                            <span class="blog-tag">MCP</span>
-                        </div>
-                        <h3>MCP: The USB-C Moment for AI Integration</h3>
-                        <p class="blog-excerpt">Why Model Context Protocol could become the universal standard for connecting AI to infrastructure tools — and what that means for platform teams.</p>
-                        <span class="blog-read-more">Read more</span>
-                    </a>
-
-                    <a href="/blog/real-cost-ai-production.html" class="card blog-card fade-in">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-01-28</span>
-                            <span class="blog-tag">AI</span>
-                        </div>
-                        <h3>The Real Cost of AI in Production</h3>
-                        <p class="blog-excerpt">Beyond the hype — what it actually takes to run AI workloads in production infrastructure. GPU costs, latency budgets, and the infrastructure decisions nobody talks about.</p>
-                        <span class="blog-read-more">Read more</span>
-                    </a>
-
-                    <a href="/blog/infrastructure-as-context.html" class="card blog-card fade-in">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-01-15</span>
-                            <span class="blog-tag">Platform Engineering</span>
-                        </div>
-                        <h3>Infrastructure as Context: How AI Agents Will Change Platform Engineering</h3>
-                        <p class="blog-excerpt">What happens when AI agents can understand your infrastructure the way they understand code? The next evolution of platform engineering is contextual.</p>
-                        <span class="blog-read-more">Read more</span>
-                    </a>
-
-                    <a href="/blog/platform-engineer-ai-agents.html" class="card blog-card fade-in">
-                        <div class="blog-meta">
-                            <span class="blog-date">2026-01-03</span>
-                            <span class="blog-tag">AI Agents</span>
-                        </div>
-                        <h3>Why Every Platform Engineer Should Understand AI Agents</h3>
-                        <p class="blog-excerpt">AI agents aren't just for data scientists. Here's why platform engineers need to understand how they work — and how to start building with them.</p>
-                        <span class="blog-read-more">Read more</span>
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <span class="footer-text">&copy; 2026 Jose Molero. Vienna, Austria.</span>
-                <div class="footer-links">
-                    <a href="https://linkedin.com/in/jmlero" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="https://github.com/jmlero" target="_blank" rel="noopener">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="/js/main.js"></script>
-</body>
-</html>
+        <h3>{{ post.title }}</h3>
+        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        <span class="blog-read-more">Read more</span>
+    </a>
+    {% endfor %}
+</div>

@@ -1,0 +1,22 @@
+title: Jose Molero
+description: DevOps & Platform Engineer exploring how AI, MCP, and AI Agents are transforming cloud infrastructure and developer workflows.
+url: https://jmlero.github.io
+author: Jose Molero
+
+permalink: /blog/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - .claude
