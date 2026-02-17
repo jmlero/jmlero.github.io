@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Every Platform Engineer Should Understand AI Agents — Jose Molero</title>
+    <meta name="description" content="AI agents aren't just for data scientists. Here's why platform engineers need to understand how they work — and how to start building with them.">
+
+    <meta property="og:title" content="Why Every Platform Engineer Should Understand AI Agents">
+    <meta property="og:description" content="AI agents aren't just for data scientists. Here's why platform engineers need to understand them.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jmlero.github.io/blog/platform-engineer-ai-agents.html">
+    <meta property="article:published_time" content="2026-01-03">
+    <meta property="article:author" content="Jose Molero">
+    <meta property="article:tag" content="AI Agents">
+
+    <link rel="canonical" href="https://jmlero.github.io/blog/platform-engineer-ai-agents.html">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">jmlero<span>_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/topics.html">Topics</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/connect.html">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page">
+        <article class="post">
+            <div class="post-header">
+                <a href="/blog/" class="post-back">&larr; Back to blog</a>
+                <h1>Why Every Platform Engineer Should Understand AI Agents</h1>
+                <div class="post-meta">
+                    <span>January 3, 2026</span>
+                    <span class="blog-tag">AI Agents</span>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>
+                    When people hear "AI agents," they think of chatbots, customer service bots, or maybe autonomous coding assistants. Platform engineers hear it and think: <strong>"another thing someone wants me to deploy."</strong>
+                </p>
+                <p>
+                    But AI agents are about to become one of the most important tools in a platform engineer's toolkit — not as something to deploy for others, but as something that fundamentally changes how we do our own work.
+                </p>
+
+                <h2>What is an AI agent, really?</h2>
+                <p>
+                    Strip away the marketing and an AI agent is simple: it's an AI model that can <strong>take actions</strong>, not just generate text. It can call APIs, run commands, read data, and make decisions about what to do next based on the results.
+                </p>
+                <p>
+                    The key difference from traditional automation:
+                </p>
+                <ul>
+                    <li><strong>Traditional automation</strong>: predefined steps, rigid logic, breaks when things change</li>
+                    <li><strong>AI agents</strong>: adaptive reasoning, can handle novel situations, learns from context</li>
+                </ul>
+                <p>
+                    For platform engineers, this distinction matters enormously. Our world is full of situations that are "mostly the same but slightly different every time" — exactly where rigid automation breaks down and AI agents excel.
+                </p>
+
+                <h2>Where agents fit in platform engineering</h2>
+                <p>
+                    Here are real use cases that I think about daily:
+                </p>
+
+                <h3>Incident response</h3>
+                <p>
+                    An agent that can be paged, triage an alert by checking relevant dashboards and logs, correlate with recent changes, and either resolve the issue or escalate with a detailed context summary. Not replacing the on-call engineer — giving them a head start.
+                </p>
+
+                <h3>Developer self-service</h3>
+                <p>
+                    Instead of building a UI for every platform capability, give developers an agent that understands your platform. "I need a new staging environment with the same config as production but with debug logging enabled" — the agent knows how to make that happen.
+                </p>
+
+                <h3>Infrastructure review</h3>
+                <p>
+                    An agent that reviews Terraform plans not just for syntax but for cost implications, security issues, and compliance requirements. It understands your organization's policies and can flag violations before they hit production.
+                </p>
+
+                <h3>Runbook automation</h3>
+                <p>
+                    Your runbooks are written for humans — they contain decision points like "if X, do Y, otherwise check Z." AI agents can follow this reasoning, adapting to the specific situation instead of blindly executing a script.
+                </p>
+
+                <h2>How to start</h2>
+                <p>
+                    You don't need to build a full autonomous operations system. Start small:
+                </p>
+                <ul>
+                    <li><strong>Learn the patterns</strong> — understand how agents use tool calling, how they maintain context, and how they make decisions</li>
+                    <li><strong>Build one MCP server</strong> — wrap one of your internal tools in MCP and see what it's like to interact with it through an AI agent</li>
+                    <li><strong>Try agent frameworks</strong> — experiment with frameworks like LangGraph, CrewAI, or the Anthropic Agent SDK to understand the building blocks</li>
+                    <li><strong>Start with read-only agents</strong> — build agents that can investigate and report, but not take action. This is low-risk and high-value</li>
+                </ul>
+
+                <h2>The platform engineer advantage</h2>
+                <p>
+                    Here's the thing that most people miss: platform engineers are <strong>uniquely positioned</strong> to build useful AI agents. We understand the tools, the APIs, the workflows, and the failure modes. We know what information an agent needs because we've been the ones doing the work manually.
+                </p>
+                <p>
+                    Data scientists can build models. Platform engineers can build agents that actually operate in production. That's the skill combination that's going to matter most in the next few years.
+                </p>
+                <p>
+                    The question isn't whether AI agents will change platform engineering. It's whether you'll be the one building them or the one catching up.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">&copy; 2026 Jose Molero. Vienna, Austria.</span>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/jmlero" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/jmlero" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

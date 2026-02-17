@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Real Cost of AI in Production — Jose Molero</title>
+    <meta name="description" content="Beyond the hype — what it actually takes to run AI workloads in production infrastructure. GPU costs, latency budgets, and the decisions nobody talks about.">
+
+    <meta property="og:title" content="The Real Cost of AI in Production">
+    <meta property="og:description" content="Beyond the hype — what it actually takes to run AI workloads in production infrastructure.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jmlero.github.io/blog/real-cost-ai-production.html">
+    <meta property="article:published_time" content="2026-01-28">
+    <meta property="article:author" content="Jose Molero">
+    <meta property="article:tag" content="AI">
+
+    <link rel="canonical" href="https://jmlero.github.io/blog/real-cost-ai-production.html">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">jmlero<span>_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/topics.html">Topics</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/connect.html">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page">
+        <article class="post">
+            <div class="post-header">
+                <a href="/blog/" class="post-back">&larr; Back to blog</a>
+                <h1>The Real Cost of AI in Production</h1>
+                <div class="post-meta">
+                    <span>January 28, 2026</span>
+                    <span class="blog-tag">AI</span>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>
+                    Everyone's talking about what AI can do. Very few are talking about what it costs to actually run it. Not the API call pricing — the real, full-stack cost of operating AI workloads in production.
+                </p>
+                <p>
+                    As a platform engineer, I see this gap every day. Teams get excited about an AI feature in development, then hit a wall when they try to productionize it. Here's what nobody warns you about.
+                </p>
+
+                <h2>It's not just the model cost</h2>
+                <p>
+                    The model inference cost — whether you're calling an API or running self-hosted — is the most visible expense. But it's often the smallest part of the total cost of ownership. The real costs hide in:
+                </p>
+                <ul>
+                    <li><strong>Infrastructure overhead</strong> — GPU instances, load balancers, caching layers, vector databases</li>
+                    <li><strong>Operational complexity</strong> — monitoring, alerting, scaling policies, fallback strategies</li>
+                    <li><strong>Latency engineering</strong> — you need to keep response times acceptable while managing model inference times</li>
+                    <li><strong>Data pipeline costs</strong> — embeddings, preprocessing, context assembly, RAG infrastructure</li>
+                    <li><strong>Reliability engineering</strong> — what happens when the model provider goes down? Rate limits? Degraded responses?</li>
+                </ul>
+
+                <h2>The latency tax</h2>
+                <p>
+                    AI inference is slow compared to traditional backend services. A typical API call takes 50-200ms. An LLM inference can take 1-10 seconds. This changes everything about your architecture:
+                </p>
+                <ul>
+                    <li>You need streaming responses for anything user-facing</li>
+                    <li>Background processing and async patterns become essential</li>
+                    <li>Caching strategies need rethinking — semantic caching is a whole new discipline</li>
+                    <li>Your SLOs need to account for fundamentally different performance characteristics</li>
+                </ul>
+
+                <h2>The scaling problem</h2>
+                <p>
+                    Traditional services scale horizontally with relatively predictable costs. AI workloads don't follow the same rules. GPU instances are expensive and hard to get. Auto-scaling is slower. Cold starts are brutal.
+                </p>
+                <p>
+                    If you're self-hosting models, you're looking at reserved GPU capacity that sits idle during low-traffic periods. If you're using APIs, you're at the mercy of rate limits and provider outages.
+                </p>
+
+                <h2>What platform teams should do</h2>
+                <p>
+                    This isn't an argument against using AI in production. It's an argument for being honest about the costs and planning accordingly:
+                </p>
+                <ul>
+                    <li><strong>Start with API-based models</strong> — defer the self-hosting complexity until you have proven value and scale</li>
+                    <li><strong>Build the observability first</strong> — you need to track cost per request, latency distributions, and error rates from day one</li>
+                    <li><strong>Design for graceful degradation</strong> — what does your feature do when the AI is unavailable?</li>
+                    <li><strong>Set cost budgets, not just compute budgets</strong> — treat AI inference cost like a product metric</li>
+                </ul>
+
+                <h2>The honest conversation</h2>
+                <p>
+                    AI in production is worth it — for the right use cases, with the right architecture, and with realistic expectations about cost. The teams that succeed are the ones that treat AI workloads with the same rigor they apply to any production system: monitoring, budgets, SLOs, and a clear-eyed view of the trade-offs.
+                </p>
+                <p>
+                    The hype will tell you AI is magic. The production bill will tell you it's engineering.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">&copy; 2026 Jose Molero. Vienna, Austria.</span>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/jmlero" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/jmlero" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

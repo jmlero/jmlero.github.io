@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure as Context: How AI Agents Will Change Platform Engineering — Jose Molero</title>
+    <meta name="description" content="What happens when AI agents can understand your infrastructure the way they understand code? The next evolution of platform engineering is contextual.">
+
+    <meta property="og:title" content="Infrastructure as Context: How AI Agents Will Change Platform Engineering">
+    <meta property="og:description" content="What happens when AI agents can understand your infrastructure the way they understand code?">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://jmlero.github.io/blog/infrastructure-as-context.html">
+    <meta property="article:published_time" content="2026-01-15">
+    <meta property="article:author" content="Jose Molero">
+    <meta property="article:tag" content="Platform Engineering">
+
+    <link rel="canonical" href="https://jmlero.github.io/blog/infrastructure-as-context.html">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">jmlero<span>_</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/topics.html">Topics</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/connect.html">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="page">
+        <article class="post">
+            <div class="post-header">
+                <a href="/blog/" class="post-back">&larr; Back to blog</a>
+                <h1>Infrastructure as Context: How AI Agents Will Change Platform Engineering</h1>
+                <div class="post-meta">
+                    <span>January 15, 2026</span>
+                    <span class="blog-tag">Platform Engineering</span>
+                </div>
+            </div>
+
+            <div class="post-content">
+                <p>
+                    We went from Infrastructure as Hardware to Infrastructure as Code. The next leap? <strong>Infrastructure as Context</strong> — where AI agents don't just execute infrastructure commands, they understand your infrastructure deeply enough to reason about it.
+                </p>
+
+                <h2>The context problem in platform engineering</h2>
+                <p>
+                    Every platform team I've worked with has the same challenge: the infrastructure is complex, the documentation is always behind, and the tribal knowledge lives in people's heads.
+                </p>
+                <p>
+                    A senior engineer knows that "the checkout service is sensitive to latency because it has a synchronous dependency on the payment gateway, which has a 2-second timeout." That context is nowhere in the code. It's not in the runbook. It lives in experience.
+                </p>
+                <p>
+                    What if AI agents could absorb that context?
+                </p>
+
+                <h2>From commands to understanding</h2>
+                <p>
+                    Today's infrastructure automation is command-driven: "scale this up," "deploy that," "restart this service." The automation doesn't understand why. It just does what it's told.
+                </p>
+                <p>
+                    AI agents with infrastructure context can operate differently. Instead of executing predefined runbooks, they can:
+                </p>
+                <ul>
+                    <li><strong>Reason about dependencies</strong> — "I shouldn't restart this service because it would cascade to three downstream services during peak hours"</li>
+                    <li><strong>Understand intent</strong> — "the developer wants to deploy a new version, which means I need to check the canary metrics, not just push the container"</li>
+                    <li><strong>Learn from history</strong> — "the last time this alert fired, the root cause was a connection pool exhaustion, not the service itself"</li>
+                    <li><strong>Suggest, not just execute</strong> — "this Terraform change will increase your monthly cost by ~$2,400. Here's an alternative that achieves the same goal for $800"</li>
+                </ul>
+
+                <h2>What "context" actually means</h2>
+                <p>
+                    For an AI agent to be useful in infrastructure, it needs access to multiple layers of context:
+                </p>
+                <ul>
+                    <li><strong>Topology</strong> — what services exist, how they connect, what they depend on</li>
+                    <li><strong>State</strong> — current health, resource utilization, recent changes</li>
+                    <li><strong>History</strong> — past incidents, deployment patterns, known failure modes</li>
+                    <li><strong>Policy</strong> — compliance requirements, cost constraints, SLOs</li>
+                    <li><strong>Intent</strong> — what the operator is trying to achieve, not just what they're asking for</li>
+                </ul>
+                <p>
+                    This is where protocols like MCP become critical. They provide a standardized way for AI agents to access all of these context layers through a single interface.
+                </p>
+
+                <h2>What platform teams should build</h2>
+                <p>
+                    If you're building an internal developer platform today, start thinking about how your platform surfaces context, not just capabilities:
+                </p>
+                <ul>
+                    <li>Make your service catalog machine-readable — dependencies, SLOs, ownership</li>
+                    <li>Structure your incident history so AI agents can learn from it</li>
+                    <li>Build your platform APIs to return not just data, but context about that data</li>
+                    <li>Consider MCP servers for your key internal tools</li>
+                </ul>
+
+                <h2>The shift</h2>
+                <p>
+                    Infrastructure as Code gave us reproducibility. Infrastructure as Context will give us intelligence. The platform teams that start building contextual foundations today will be the ones with the smartest AI-powered operations tomorrow.
+                </p>
+                <p>
+                    The infrastructure isn't changing. How we understand it is.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-text">&copy; 2026 Jose Molero. Vienna, Austria.</span>
+                <div class="footer-links">
+                    <a href="https://linkedin.com/in/jmlero" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://github.com/jmlero" target="_blank" rel="noopener">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
