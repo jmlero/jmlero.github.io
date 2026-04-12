@@ -926,3 +926,394 @@ img {
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
 .mb-4 { margin-bottom: 2rem; }
+
+/* ============================================
+   Research page
+   ============================================ */
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.research-ref {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+  opacity: 0.6;
+  min-width: 2.5rem;
+}
+
+.research-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.research-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.research-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.research-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.research-status--published {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.research-status--draft {
+  background: rgba(59, 130, 246, 0.15);
+  color: var(--blue);
+}
+
+.research-item h3 {
+  font-family: var(--font-mono);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
+}
+
+.research-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.research-links {
+  margin-top: 1rem;
+}
+
+.research-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  transition: color 0.2s;
+}
+
+.research-link:hover {
+  color: #33e6c0;
+}
+
+@media (max-width: 600px) {
+  .research-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .research-ref {
+    margin-bottom: -0.25rem;
+  }
+}
+
+/* ============================================
+   CV page
+   ============================================ */
+.cv-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* Sections */
+.cv-section {
+  margin-bottom: 3rem;
+}
+
+.cv-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cv-section-icon {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--accent);
+  opacity: 0.7;
+}
+
+.cv-section-header h2 {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Timeline */
+.cv-timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.cv-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.cv-entry {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.cv-entry:last-child {
+  margin-bottom: 0;
+}
+
+.cv-dot {
+  position: absolute;
+  left: -2rem;
+  top: 1.75rem;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  z-index: 1;
+  transform: translateX(0.5px);
+}
+
+.cv-entry:first-child .cv-dot {
+  background: var(--accent);
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.cv-entry-content {
+  padding: 1.5rem 2rem;
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.cv-entry-header h3 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cv-company {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.cv-company a {
+  color: var(--accent);
+}
+
+.cv-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cv-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cv-details li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cv-details li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Skills grid */
+.cv-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.cv-skill-group {
+  padding: 1.5rem;
+}
+
+.cv-skill-group h4 {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.cv-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.cv-skill-tags span {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  background: var(--accent-dim);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.73rem;
+  border-radius: 6px;
+}
+
+/* Certifications */
+.cv-certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.cv-cert {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.cv-cert-icon {
+  font-size: 1.25rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.cv-cert h4 {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.cv-cert-issuer {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .cv-entry-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .cv-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cv-certs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Print styles for CV */
+@media print {
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .bg-glow, .nav, .footer, .cv-actions {
+    display: none !important;
+  }
+
+  .page {
+    padding-top: 0;
+  }
+
+  .card {
+    background: transparent;
+    border: 1px solid #ddd;
+    box-shadow: none;
+  }
+
+  .cv-dot {
+    border-color: #333;
+  }
+
+  .cv-entry:first-child .cv-dot {
+    background: #333;
+    box-shadow: none;
+  }
+
+  .cv-timeline::before {
+    background: #ddd;
+  }
+
+  .cv-details li::before {
+    color: #333;
+  }
+
+  .cv-skill-tags span, .research-status, .blog-tag {
+    background: #f0f0f0;
+    color: #333;
+  }
+
+  a {
+    color: #111;
+  }
+
+  .section-label {
+    color: #555;
+  }
+
+  .section-title, .cv-section-header h2, h3 {
+    color: #111;
+  }
+
+  .cv-company, .cv-date, .cv-details li, .text-secondary {
+    color: #444;
+  }
+}
