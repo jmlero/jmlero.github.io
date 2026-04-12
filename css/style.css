@@ -12,22 +12,23 @@
   box-sizing: border-box;
 }
 
-/* Variables */
+/* Variables — Light warm palette */
 :root {
-  --bg-primary: #0a0f1c;
-  --bg-secondary: #111827;
-  --bg-card: #1a2332;
-  --bg-card-hover: #1f2b3d;
-  --text-primary: #e2e8f0;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --accent: #00d4aa;
-  --accent-dim: rgba(0, 212, 170, 0.15);
-  --accent-glow: rgba(0, 212, 170, 0.25);
-  --blue: #3b82f6;
-  --purple: #8b5cf6;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-hover: rgba(0, 212, 170, 0.3);
+  --bg-primary: #f8f6f3;
+  --bg-secondary: #efeae4;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fdfcfb;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
+  --accent: #0d7c66;
+  --accent-hover: #0a9b80;
+  --accent-dim: rgba(13, 124, 102, 0.08);
+  --accent-glow: rgba(13, 124, 102, 0.12);
+  --blue: #2563eb;
+  --purple: #7c3aed;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(13, 124, 102, 0.3);
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --max-width: 1100px;
@@ -42,7 +43,7 @@ html {
 }
 
 ::selection {
-  background: rgba(0, 212, 170, 0.3);
+  background: rgba(13, 124, 102, 0.2);
   color: var(--text-primary);
 }
 
@@ -57,14 +58,14 @@ body {
   flex-direction: column;
 }
 
-/* Subtle noise texture overlay for depth */
+/* Subtle grain texture */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.035;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -77,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: #33e6c0;
+  color: var(--accent-hover);
 }
 
 img {
@@ -85,7 +86,7 @@ img {
   display: block;
 }
 
-/* Background glow */
+/* Background glow — warm subtle blobs */
 .bg-glow {
   position: fixed;
   top: 0;
@@ -104,7 +105,7 @@ img {
   right: -10%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(0, 212, 170, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(13, 124, 102, 0.04) 0%, transparent 60%);
   animation: glow-drift 20s ease-in-out infinite;
 }
 
@@ -115,7 +116,7 @@ img {
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 60%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.03) 0%, transparent 60%);
   animation: glow-drift 25s ease-in-out infinite reverse;
 }
 
@@ -134,7 +135,7 @@ img {
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: rgba(10, 15, 28, 0.85);
+  background: rgba(248, 246, 243, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -234,7 +235,7 @@ img {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(10, 15, 28, 0.95);
+    background: rgba(248, 246, 243, 0.97);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     padding: 1rem;
@@ -314,7 +315,7 @@ img {
 }
 
 .hero h1 .gradient {
-  background: linear-gradient(135deg, var(--accent) 0%, #33e6c0 40%, var(--blue) 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 40%, var(--blue) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -361,21 +362,21 @@ img {
   border-color: var(--border-hover);
   background: var(--bg-card-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   color: var(--text-primary);
 }
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg-primary);
+  color: #fff;
   border-color: var(--accent);
 }
 
 .btn-primary:hover {
-  background: #00e6b8;
-  border-color: #00e6b8;
-  color: var(--bg-primary);
-  box-shadow: 0 4px 24px var(--accent-glow), 0 0 48px rgba(0, 212, 170, 0.15);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(13, 124, 102, 0.25);
 }
 
 .btn-icon {
@@ -424,27 +425,13 @@ img {
   padding: 2rem;
   transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
   position: relative;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: 17px;
-  background: linear-gradient(135deg, transparent 40%, var(--accent-glow) 100%);
-  z-index: -1;
-  opacity: 0;
-  transition: opacity 0.4s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 .card:hover {
   border-color: var(--border-hover);
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 60px rgba(0, 212, 170, 0.06);
-}
-
-.card:hover::before {
-  opacity: 1;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(13, 124, 102, 0.08);
 }
 
 /* ============================================
@@ -466,6 +453,7 @@ img {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   display: inline-block;
+  color: var(--accent);
 }
 
 .topic-card h3 {
@@ -533,6 +521,7 @@ img {
   font-size: 0.7rem;
   font-weight: 500;
   border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .blog-card h3 {
@@ -576,8 +565,7 @@ img {
 
 .blog-card:hover .blog-tag {
   background: var(--accent);
-  color: var(--bg-primary);
-  transition: background 0.3s, color 0.3s;
+  color: #fff;
 }
 
 /* ============================================
@@ -675,7 +663,7 @@ img {
 .post-content code {
   font-family: var(--font-mono);
   font-size: 0.9em;
-  background: rgba(0, 212, 170, 0.1);
+  background: var(--accent-dim);
   color: var(--accent);
   padding: 0.15rem 0.4rem;
   border-radius: 4px;
@@ -749,6 +737,7 @@ img {
   justify-content: center;
   font-family: var(--font-mono);
   font-size: 1.1rem;
+  color: var(--accent);
 }
 
 .highlight-item h4 {
@@ -785,6 +774,10 @@ img {
 .connect-card .connect-icon {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+}
+
+.connect-card .connect-icon svg {
+  fill: var(--accent);
 }
 
 .connect-card h3 {
@@ -962,7 +955,7 @@ img {
   font-size: 0.85rem;
 }
 
-/* Terminal cursor blink */
+/* Terminal cursor */
 .cursor {
   display: inline-block;
   width: 3px;
@@ -972,7 +965,6 @@ img {
   vertical-align: text-bottom;
   animation: pulse 1.2s ease-in-out infinite;
   border-radius: 1px;
-  box-shadow: 0 0 8px var(--accent-glow);
 }
 
 @keyframes pulse {
@@ -999,7 +991,7 @@ img {
   padding: 6rem 2rem;
   border: 1px dashed var(--border);
   border-radius: 20px;
-  background: linear-gradient(135deg, rgba(26, 35, 50, 0.5), rgba(10, 15, 28, 0.8));
+  background: var(--bg-card);
   position: relative;
   overflow: hidden;
 }
@@ -1009,7 +1001,7 @@ img {
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 50% 0%, var(--accent-glow), transparent 70%);
-  opacity: 0.3;
+  opacity: 0.4;
   pointer-events: none;
 }
 
@@ -1017,7 +1009,7 @@ img {
   font-family: var(--font-mono);
   font-size: 2.5rem;
   color: var(--accent);
-  opacity: 0.4;
+  opacity: 0.3;
   margin-bottom: 1.5rem;
   letter-spacing: 4px;
 }
