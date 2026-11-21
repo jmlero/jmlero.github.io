@@ -1,25 +1,18 @@
 ---
-layout: page
-title: Blog
-label: Blog
-heading: Thoughts on AI, infra, and everything in between
-subtitle: I write about what I'm learning at the intersection of AI and platform engineering.
+title: Writing
+label: Writing
+heading: Notes on platforms, agents and everything in between.
+subtitle: Longer pieces on running AI agents in production. Shorter takes live on LinkedIn and Substack.
 permalink: /blog/
-description: Writing about applied AI in DevOps, MCP, AI Agents, platform engineering, and cloud infrastructure.
+description: Writing by Jose Molero on Agent Platform Engineering, AI agents and platform engineering.
 ---
 
-<div class="blog-grid">
+<div class="post-list">
     {% for post in site.posts %}
-    <a href="{{ post.url }}" class="card blog-card fade-in">
-        <div class="blog-meta">
-            <span class="blog-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-            {% for tag in post.tags %}
-            <span class="blog-tag">{{ tag }}</span>
-            {% endfor %}
-        </div>
-        <h3>{{ post.title }}</h3>
-        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        <span class="blog-read-more">Read more</span>
+    <a href="{{ post.url }}" class="post-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+        <span class="post-item-title">{{ post.title }}<span class="post-item-desc">{{ post.description }}</span></span>
+        <span class="post-item-arrow" aria-hidden="true">&rarr;</span>
     </a>
     {% endfor %}
 </div>

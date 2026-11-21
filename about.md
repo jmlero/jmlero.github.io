@@ -1,57 +1,43 @@
 ---
-layout: page
 title: About
 label: About
-heading: "Platform engineer,<br>AI practitioner."
+heading: Platform engineer, building platforms for AI agents.
 permalink: /about/
-description: About Jose Molero — DevOps & Platform Engineer at squer, based in Vienna. Building cloud infrastructure and exploring applied AI.
+description: About Jose Molero, Lead Engineer at SQUER in Vienna, focused on Agent Platform Engineering.
 ---
 
 <div class="about-grid" markdown="1">
-<div class="about-text" markdown="1">
+<div class="prose" markdown="1">
 
-## Who I am
+I help enterprises run AI agents in production. I call it **Agent Platform Engineering**.
 
-I'm Jose Molero, a DevOps and Platform Engineer based in **Vienna, Austria**. I currently work at **[squer](https://squer.io){:target="_blank"}**, where I help teams build reliable cloud infrastructure and developer platforms.
+Most companies can build an agent demo. Few can run agents safely at scale. Agents need what every workload needs, plus more: identity, tool access, cost control, observability, evaluation and compliance.
 
-My day-to-day involves designing cloud-native architectures, building internal platforms, and making sure developers can ship software with confidence. I care deeply about developer experience — the tooling, workflows, and abstractions that let engineering teams move fast without breaking things.
+My answer is platform engineering applied to agents:
 
-## What drives me
+- **Run:** agent runtimes and tooling on AWS and Kubernetes
+- **Govern:** policies, guardrails, EU AI Act and DORA, European sovereignty
+- **Trust:** evals, observability and treating agent context as a product
 
-I'm fascinated by the intersection of **AI and infrastructure**. Not the hype — the practical application. How can AI agents help us manage complex systems? How does MCP (Model Context Protocol) create a universal language between AI models and our tools? What does it look like when GenAI becomes part of the platform engineer's toolkit?
+Today I build the agent tooling that many teams at a large enterprise use every day: a spec-driven development framework, Claude Code plugins and an internal catalog of AI tools.
 
-I'm not an AI researcher. I'm a practitioner — someone who takes these technologies and figures out how they solve real problems in cloud and DevOps. I write about what I learn, share my experiments, and try to cut through the noise to what actually matters.
+I work at [SQUER](https://www.squer.io){:target="_blank" rel="noopener"} in Vienna, combining hands-on engineering with technical leadership as a consultant. I believe in closing the loop: agents that can test their own work, and humans who stay accountable where it matters.
 
-## Building in public
-
-I'm actively building my voice on [LinkedIn](https://linkedin.com/in/jmlero){:target="_blank"}, posting several times a week about applied AI in DevOps, platform engineering, and the tooling that's changing how we work. If you're interested in these topics, I'd love to connect.
-
-</div>
-<div class="about-highlights fade-in" markdown="0">
-
-<div class="card" style="padding: 2rem;">
-<h3 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--accent);">At a glance</h3>
-<div class="about-highlights">
-<div class="highlight-item"><div class="highlight-icon">&gt;_</div><div><h4>Role</h4><p>DevOps & Platform Engineer</p></div></div>
-<div class="highlight-item"><div class="highlight-icon">@</div><div><h4>Company</h4><p>squer</p></div></div>
-<div class="highlight-item"><div class="highlight-icon">~</div><div><h4>Based in</h4><p>Vienna, Austria</p></div></div>
-<div class="highlight-item"><div class="highlight-icon">#</div><div><h4>Focus</h4><p>Applied AI, MCP, AI Agents, Cloud Infrastructure</p></div></div>
-<div class="highlight-item"><div class="highlight-icon">$</div><div><h4>Building</h4><p>Developer platforms & internal tooling</p></div></div>
-</div>
-</div>
-
-<div class="card" style="padding: 2rem; margin-top: 1.5rem;">
-<h3 style="font-family: var(--font-mono); font-size: 0.9rem; margin-bottom: 1rem; color: var(--accent);">Core areas</h3>
-<div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">Cloud Infrastructure</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">Platform Engineering</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">Applied AI / GenAI</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">DevOps</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">MCP</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">AI Agents</span>
-<span class="topic-tag" style="display: inline-block; padding: 0.3rem 0.8rem; background: var(--accent-dim); color: var(--accent); font-family: var(--font-mono); font-size: 0.75rem; border-radius: 20px;">IaC</span>
-</div>
-</div>
+I write about this in [Filter the noise]({{ site.substack }}){:target="_blank" rel="noopener"} and speak at conferences and meetups. See my [talks](/talks/).
 
 </div>
+<aside class="card facts" markdown="0">
+    <h2 class="facts-title">At a glance</h2>
+    <dl>
+        <dt>Role</dt><dd>Lead Engineer, SQUER</dd>
+        <dt>Focus</dt><dd>Agent Platform Engineering</dd>
+        <dt>Based in</dt><dd>Vienna, Austria</dd>
+        <dt>Experience</dt><dd>17+ years in software and platform engineering</dd>
+        <dt>Education</dt><dd>PhD in Computer Science</dd>
+        <dt>Certifications</dt><dd>6× AWS, 4× CNCF, Anthropic</dd>
+        <dt>Recognition</dt><dd>Winner, AI Platform Hackathon</dd>
+        <dt>Speaking</dt><dd>DSC DACH 2026</dd>
+        <dt>Languages</dt><dd>Spanish, English, German (learning)</dd>
+    </dl>
+</aside>
 </div>

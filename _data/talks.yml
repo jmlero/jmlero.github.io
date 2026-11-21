@@ -1,0 +1,34 @@
+- title: "From Code to Context: Engineering a Framework for AI-Driven Software Development"
+  status: Delivered
+  event: DSC DACH 2026
+  abstract: >
+    What happens when part of the software you maintain is written in natural language and executed by AI agents?
+    Lessons from building a spec-driven development framework used by many teams: how to organize agent context,
+    test instructions whose execution varies between runs, and keep people accountable for acceptance.
+
+- title: "Agent Platform Engineering: Running AI Agents in Production"
+  status: Available
+  abstract: >
+    Most companies can build an agent. Few can run fifty of them safely. This talk applies proven platform
+    engineering to agents: runtimes, gateways, identity, policies, evals and observability, so teams ship
+    agents fast without losing control.
+
+- title: "Build the Thing that Runs the Thing"
+  status: Available
+  abstract: >
+    Agents can write the code. Someone still has to carry the workflow: context, continuity, verification and
+    follow-through. A look at an operator-controlled platform on Kubernetes where agent work continues beyond
+    the chat and people keep control.
+
+- title: "Don't Trust the Agent: Evaluating Agent Output in Real Systems"
+  status: Available
+  abstract: >
+    Agents produce code, configuration and decisions, and most teams have no systematic way to check them.
+    A practical framework of quality gates, behavioral evals and checkpoints between the agent and the action.
+
+- title: "EU-Ready AI Infrastructure: DORA, the EU AI Act and Sovereign Cloud"
+  status: Available
+  audience: Business and technical leaders
+  abstract: >
+    What European regulation means for running AI in production, explained for decision makers: where the
+    obligations land in the platform, which controls matter, and how sovereign cloud options fit in.

@@ -1,5 +1,5 @@
 /* ============================================
-   jmlero.github.io — Main JS
+   josemolero.me · Main JS
    ============================================ */
 
 // Mobile nav toggle
@@ -9,8 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (toggle && links) {
     toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      links.classList.toggle('open');
+      const open = links.classList.toggle('open');
+      toggle.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
     });
 
     // Close menu on link click
@@ -23,7 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Scroll-triggered fade-in animations
-  const fadeEls = document.querySelectorAll('.fade-in');
+  const fadeEls = document.querySelectorAll('.card, .section-head');
+  fadeEls.forEach(el => el.classList.add('fade-in'));
   if (fadeEls.length > 0) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

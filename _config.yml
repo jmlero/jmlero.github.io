@@ -1,7 +1,13 @@
 title: Jose Molero
-description: DevOps & Platform Engineer exploring how AI, MCP, and AI Agents are transforming cloud infrastructure and developer workflows.
-url: https://jmlero.github.io
+tagline: Agent Platform Engineering
+description: "Agent Platform Engineering: the platform that lets enterprises run AI agents in production, secure, observable and EU-ready."
+url: https://josemolero.me
 author: Jose Molero
+linkedin: https://www.linkedin.com/in/jmolero/
+github: https://github.com/jmlero
+substack: https://josemolero.substack.com/
+sessionize: https://sessionize.com/jmlero/
+email: jmlero@proton.me
 
 permalink: /blog/:slug/
 
