@@ -1,6 +1,7 @@
 - name: Run
   summary: Agent runtimes and tooling on AWS and Kubernetes
   points:
+    - Managed (AWS Bedrock) or portable (Kubernetes)
     - Agent runtimes and sandboxes
     - Gateways for models and MCP tools
     - Golden paths and self-service for agent teams
@@ -10,7 +11,8 @@
   points:
     - Agent identity and permissions
     - Policies and guardrails for every action
-    - EU AI Act, DORA and sovereign cloud options
+    - EU AI Act, DORA and data residency
+    - Runs on any cloud, sovereign cloud or on-premises
 
 - name: Trust
   summary: Evals, observability, context as a product
@@ -18,3 +20,4 @@
     - Evaluations before and after release
     - Tracing, cost and quality per agent
     - Agent context treated as a product
+    - Human checkpoints for risky actions

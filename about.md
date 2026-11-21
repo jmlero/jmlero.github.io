@@ -16,7 +16,7 @@ Most companies can build an agent demo. Few can run agents safely at scale. Agen
 My answer is platform engineering applied to agents:
 
 - **Run:** agent runtimes and tooling on AWS and Kubernetes
-- **Govern:** policies, guardrails, EU AI Act and DORA, European sovereignty
+- **Govern:** policies, guardrails, EU AI Act and DORA, on any cloud, sovereign cloud or on-premises
 - **Trust:** evals, observability and treating agent context as a product
 
 Today I build the agent tooling that many teams at a large enterprise use every day: a spec-driven development framework, Claude Code plugins and an internal catalog of AI tools.
