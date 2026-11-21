@@ -8,6 +8,8 @@ github: https://github.com/jmlero
 substack: https://josemolero.substack.com/
 sessionize: https://sessionize.com/jmlero/
 email: jmlero@proton.me
+# Analytics: set to your GoatCounter code (e.g. "josemolero" for josemolero.goatcounter.com) to enable
+goatcounter:
 
 permalink: /blog/:slug/
 

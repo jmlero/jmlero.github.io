@@ -28,5 +28,6 @@
     {{ content }}
     {% include footer.html %}
     <script src="/js/main.js"></script>
+    {% if site.goatcounter %}<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>{% endif %}
 </body>
 </html>
