@@ -4,7 +4,7 @@ label: Talks
 heading: Talks on running AI agents in production.
 subtitle: Available for conferences, meetups and company events, in English or Spanish. Sessions can be tailored for engineering or business audiences.
 permalink: /talks/
-description: Talks by Jose Molero on Agent Platform Engineering, agent evaluation, agent context and EU-ready AI infrastructure.
+description: Talks by Jose Molero on Agent Platform Engineering, agent evaluation and agent context.
 ---
 
 <div class="talk-list talk-list-full">

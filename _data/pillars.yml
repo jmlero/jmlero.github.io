@@ -1,23 +1,23 @@
 - name: Run
-  summary: Agent runtimes and tooling on AWS and Kubernetes
+  summary: Runtime, sandboxes and gateways where any agent or software factory runs
   points:
-    - Managed (AWS Bedrock) or portable (Kubernetes)
-    - Agent runtimes and sandboxes
-    - Gateways for models and MCP tools
-    - Golden paths and self-service for agent teams
+    - Agent runtime and isolated sandboxes
+    - Gateways for models, MCP tools and agents
+    - Teams bring their own agents and factories
+    - Golden paths from first agent to production
 
 - name: Govern
-  summary: Policies, guardrails, EU AI Act and DORA
+  summary: Identity, budgets and policies, on Kubernetes you own
   points:
-    - Agent identity and permissions
-    - Policies and guardrails for every action
-    - EU AI Act, DORA and data residency
-    - Runs on any cloud, sovereign cloud or on-premises
+    - Identity and permissions for every agent
+    - Budgets and limits per task and team
+    - Policies for every action
+    - Any cloud or on-premises, no lock-in
 
 - name: Trust
-  summary: Evals, observability, context as a product
+  summary: "Evals, tracing and evidence: a result counts only with proof"
   points:
-    - Evaluations before and after release
+    - Checks and an independent review before a result is accepted
     - Tracing, cost and quality per agent
-    - Agent context treated as a product
-    - Human checkpoints for risky actions
+    - Evals for every change in prompts, skills or models
+    - Human checkpoints where it matters

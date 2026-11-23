@@ -9,15 +9,15 @@ description: About Jose Molero, Lead Engineer at SQUER in Vienna, focused on Age
 <div class="about-grid" markdown="1">
 <div class="prose" markdown="1">
 
-I help enterprises run AI agents in production. I call it **Agent Platform Engineering**.
+I build the platform where teams run their AI agents and software factories in production. I call it **Agent Platform Engineering**.
 
-Most companies can build an agent demo. Few can run agents safely at scale. Agents need what every workload needs, plus more: identity, tool access, cost control, observability, evaluation and compliance.
+Agents and software factories build the software. Someone has to build the thing they run on. Most companies can build an agent demo, but running many agents in production needs a runtime, sandboxes, gateways, identity, budgets, tracing and evals.
 
 My answer is platform engineering applied to agents:
 
-- **Run:** agent runtimes and tooling on AWS and Kubernetes
-- **Govern:** policies, guardrails, EU AI Act and DORA, on any cloud, sovereign cloud or on-premises
-- **Trust:** evals, observability and treating agent context as a product
+- **Run:** runtime, sandboxes and gateways where any agent or software factory runs
+- **Govern:** identity, budgets and policies, on Kubernetes you own, in any cloud or on-premises
+- **Trust:** evals, tracing and evidence: a result counts only with proof
 
 Today I build the agent tooling that many teams at a large enterprise use every day: a spec-driven development framework, Claude Code plugins and an internal catalog of AI tools.
 
